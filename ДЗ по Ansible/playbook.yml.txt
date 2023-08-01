@@ -1,0 +1,23 @@
+- name: Install cmatrix, cowsay, sl
+  hosts: Nasibulin
+  become: true
+  tasks:
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+
+    - name: Installing cmatrix
+      apt:
+        name: cmatrix
+        state: present
+
+    - name: Installing cowsay
+      apt:
+        name: cowsay
+        state: present
+
+    - name: Installing sl
+      apt:
+        name: sl
+        state: present
+
